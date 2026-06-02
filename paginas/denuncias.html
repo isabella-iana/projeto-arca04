@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerenciar Denúncias - ARCA</title>
+<link rel="stylesheet" href="../css/denuncias.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="img/logo-arca.png" alt="ARCA">
+</div>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="cadastro-animal.html">Animais</a>
+<a href="denuncias.html">Denúncias</a>
+<a href="atendimento.html">Atendimento</a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="topo">
+
+<h1>Gerenciamento de Denúncias</h1>
+
+<p>
+Acompanhe e gerencie as denúncias recebidas pelo Programa ARCA.
+</p>
+
+</section>
+
+<section class="resumo">
+
+<div class="card">
+<h2>38</h2>
+<p>Denúncias Ativas</p>
+</div>
+
+<div class="card">
+<h2>12</h2>
+<p>Em Análise</p>
+</div>
+
+<div class="card">
+<h2>95</h2>
+<p>Resolvidas</p>
+</div>
+
+</section>
+
+<section class="filtros">
+
+<input type="text" placeholder="Pesquisar protocolo">
+
+<select>
+<option>Todos</option>
+<option>Urgente</option>
+<option>Em Análise</option>
+<option>Resolvido</option>
+</select>
+
+<button>
+Pesquisar
+</button>
+
+</section>
+
+<section class="tabela-area">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Protocolo</th>
+<th>Bairro</th>
+<th>Data</th>
+<th>Prioridade</th>
+<th>Status</th>
+<th>Ações</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#AR001</td>
+<td>Nova Almeida</td>
+<td>12/05/2026</td>
+<td class="urgente">Alta</td>
+<td>Em análise</td>
+
+<td>
+
+<button class="aprovar">
+Atender
+</button>
+
+<button class="detalhes">
+Detalhes
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#AR002</td>
+<td>Laranjeiras</td>
+<td>15/05/2026</td>
+<td>Média</td>
+<td>Pendente</td>
+
+<td>
+
+<button class="aprovar">
+Atender
+</button>
+
+<button class="detalhes">
+Detalhes
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#AR003</td>
+<td>Feu Rosa</td>
+<td>18/05/2026</td>
+<td class="urgente">Alta</td>
+<td>Pendente</td>
+
+<td>
+
+<button class="aprovar">
+Atender
+</button>
+
+<button class="detalhes">
+Detalhes
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section class="imagem">
+
+<img src="../imagens/fofo.jpg" alt="Denúncia">
+
+</section>
+
+</main>
+
+<footer>
+
+Programa ARCA • Prefeitura da Serra
+
+</footer>
+
+<script src="../js/denuncias.js"></script>
+
+</body>
+</html>

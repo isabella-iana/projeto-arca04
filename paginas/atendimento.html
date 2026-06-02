@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atendimento Veterinário - ARCA</title>
+<link rel="stylesheet" href="../css/atendimento.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="./imagens/logo_arca.png" alt="ARCA">
+</div>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="cadastro-animal.html">Animais</a>
+<a href="denuncias.html">Denúncias</a>
+<a href="atendimento.html">Atendimento</a>
+<a href="gerenciar-animais.html"></a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="titulo">
+
+<h1>Atendimento Veterinário</h1>
+
+<p>
+Controle de consultas, diagnósticos e acompanhamento clínico dos animais resgatados.
+</p>
+
+</section>
+
+<section class="conteudo">
+
+<section class="formulario">
+
+<h2>Novo Atendimento</h2>
+
+<form id="formAtendimento">
+
+<label>Animal</label>
+<input type="text" required>
+
+<label>Veterinário Responsável</label>
+<input type="text" required>
+
+<label>Diagnóstico</label>
+<textarea required></textarea>
+
+<label>Prioridade</label>
+
+<select>
+<option>Baixa</option>
+<option>Média</option>
+<option>Alta</option>
+<option>Urgente</option>
+</select>
+
+<label>Status</label>
+
+<select>
+<option>Em Observação</option>
+<option>Em Tratamento</option>
+<option>Recuperado</option>
+<option>Liberado para Adoção</option>
+</select>
+
+<button type="submit">
+Registrar Atendimento
+</button>
+
+</form>
+
+</section>
+
+<section class="imagem">
+
+<img src="./imagens/images (2).jpg" alt="Animal em tratamento">
+
+</section>
+
+</section>
+
+<section class="historico">
+
+<h2>Últimos Atendimentos</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Animal</th>
+<th>Veterinário</th>
+<th>Diagnóstico</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Thor</td>
+<td>Dra. Ana Silva</td>
+<td>Fratura na pata</td>
+<td>Em Tratamento</td>
+</tr>
+
+<tr>
+<td>Mel</td>
+<td>Dr. Carlos Souza</td>
+<td>Desnutrição</td>
+<td>Recuperado</td>
+</tr>
+
+<tr>
+<td>Luna</td>
+<td>Dra. Fernanda Costa</td>
+<td>Infecção</td>
+<td>Em Observação</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+</main>
+
+<footer>
+
+Programa ARCA • Prefeitura da Serra
+
+</footer>
+
+<script src="../js/atendimento.js"></script>
+
+</body>
+</html>
