@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const indice = document.getElementById("indice");
     const alerta = document.getElementById("formAlerta");
 
-    // Dados iniciais de exemplo
     let animais = [
         { nome: "Thor", especie: "Cachorro", raca: "Vira-lata", status: "Disponível" },
         { nome: "Mel",  especie: "Cachorro", raca: "Labrador",  status: "Em Tratamento" },
