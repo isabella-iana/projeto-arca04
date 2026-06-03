@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background: white;
+    background: #2e7d32;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #1b5e20;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -79,7 +79,7 @@ main {
 .card {
     flex: 1;
     min-width: 200px;
-    background: white;
+    background: #4caf50;
     padding: 30px;
     border-radius: 20px;
     text-align: center;
@@ -88,8 +88,12 @@ main {
 
 .card h2 {
     font-size: 42px;
-    color: #2e7d32;
+    color: #fff;
     margin-bottom: 10px;
+}
+
+.card p {
+    color: #fff;
 }
 
 .animais h2 {
