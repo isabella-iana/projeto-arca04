@@ -1,7 +1,3 @@
-/* =====================================================================
-   PROGRAMA ARCA — Gerenciamento de Denúncias
-   Pesquisa por protocolo, filtro por status e ações nas linhas.
-   ===================================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 

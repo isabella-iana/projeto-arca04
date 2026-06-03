@@ -1,6 +1,3 @@
-/* =====================================================================
-   PROGRAMA ARCA — Gerenciamento de Animais (CRUD em memória)
-   ===================================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 

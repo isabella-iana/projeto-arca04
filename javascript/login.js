@@ -1,7 +1,3 @@
-/* =====================================================================
-   PROGRAMA ARCA — Autenticação de acesso
-   Credenciais e perfis preservados conforme o sistema original.
-   ===================================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 

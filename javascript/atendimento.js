@@ -1,7 +1,3 @@
-/* =====================================================================
-   PROGRAMA ARCA — Atendimento Veterinário
-   Registra novos atendimentos na tabela de histórico.
-   ===================================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
