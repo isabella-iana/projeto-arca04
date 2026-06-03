@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Animais — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Prefeitura da Serra</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu administrativo">
+                <a href="dashboard.html">Dashboard</a>
+                <a class="active" href="gerenciar-animais.html">Animais</a>
+                <a href="cadastro-animal.html">Cadastrar</a>
+                <a href="denuncias.html">Denúncias</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="relatorios.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Prefeitura</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/cachorro3.jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">GESTÃO DE ANIMAIS</span>
+                <h1>Gerenciamento de Animais</h1>
+                <p>Cadastro, edição e remoção dos animais resgatados pelo Programa ARCA.</p>
+            </div>
+        </section>
+
+        <section class="section split">
+
+            <div class="panel">
+                <div class="panel__title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                    <h2>Cadastro de Animal</h2>
+                </div>
+
+                <form id="animalForm" class="form-grid" novalidate>
+                    <input type="hidden" id="indice">
+
+                    <div class="field">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Ex.: Thor" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="especie">Espécie</label>
+                        <select id="especie">
+                            <option>Cachorro</option>
+                            <option>Gato</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="raca">Raça</label>
+                        <input type="text" id="raca" placeholder="Ex.: Vira-lata" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option>Disponível</option>
+                            <option>Em Tratamento</option>
+                            <option>Adotado</option>
+                        </select>
+                    </div>
+
+                    <div id="formAlerta" class="form-alert" role="status"></div>
+
+                    <button type="submit" class="btn btn--primary btn--block">Salvar Animal</button>
+                </form>
+            </div>
+
+            <div class="panel">
+                <div class="panel__title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                    <h2>Animais Cadastrados</h2>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Nome</th><th>Espécie</th><th>Raça</th><th>Status</th><th>Ações</th></tr>
+                        </thead>
+                        <tbody id="listaAnimais"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+    <script src="../../javascript/gerenciar-animais.js"></script>
+
+</body>
+
+</html>

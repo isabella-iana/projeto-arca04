@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Castração — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="home.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Portal do Tutor</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu do tutor">
+                <a href="home.html">Início</a>
+                <a href="solicitar-resgate.html">Resgate</a>
+                <a class="active" href="solicitar-castracao.html">Castração</a>
+                <a href="minhas-solicitacoes.html">Solicitações</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Tutor</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/cachorro5.jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">PROGRAMA GRATUITO</span>
+                <h1>Cadastro para Castração</h1>
+                <p>A castração responsável previne abandono e doenças. O serviço é gratuito para famílias do município da Serra.</p>
+            </div>
+        </section>
+
+        <section class="section split">
+
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h2>Dados para Agendamento</h2></div>
+
+                <form id="formCastracao" class="form-grid" novalidate>
+                    <div class="field"><label for="tutor">Nome do Tutor</label><input type="text" id="tutor" placeholder="Nome completo" required></div>
+                    <div class="form-grid two" style="gap:16px">
+                        <div class="field"><label for="cpf">CPF</label><input type="text" id="cpf" placeholder="000.000.000-00" required></div>
+                        <div class="field"><label for="nis">NIS</label><input type="text" id="nis" placeholder="Número do NIS" required></div>
+                    </div>
+                    <div class="field"><label for="animal">Nome do Animal</label><input type="text" id="animal" placeholder="Ex.: Rex" required></div>
+                    <div class="field"><label for="especie">Espécie</label><select id="especie"><option>Cachorro</option><option>Gato</option></select></div>
+                    <div id="formAlerta" class="form-alert" role="status"></div>
+                    <button type="submit" class="btn btn--primary btn--block">Solicitar Castração</button>
+                </form>
+            </div>
+
+            <div style="display:grid;gap:18px">
+                <div class="highlight">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+                    <div><strong>Benefícios da castração</strong><p>Reduz o abandono, previne doenças e contribui para o controle populacional de cães e gatos.</p></div>
+                </div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><h3>Agendamento</h3><p>Após o cadastro, a equipe entra em contato para confirmar a data e o local do procedimento.</p></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+    <script>
+        document.getElementById("formCastracao").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const alerta = document.getElementById("formAlerta");
+            const campos = ["tutor", "cpf", "nis", "animal"];
+            const ok = campos.every(function (id) { return document.getElementById(id).value.trim() !== ""; });
+
+            if (!ok) {
+                alerta.textContent = "Preencha todos os campos obrigatórios.";
+                alerta.className = "form-alert show form-alert--err";
+                return;
+            }
+            alerta.textContent = "Cadastro enviado! Em breve entraremos em contato para agendar.";
+            alerta.className = "form-alert show form-alert--ok";
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>

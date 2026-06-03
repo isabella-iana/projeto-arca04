@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="home.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Portal do Tutor</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu do tutor">
+                <a href="home.html">Início</a>
+                <a href="solicitar-resgate.html">Resgate</a>
+                <a href="solicitar-castracao.html">Castração</a>
+                <a href="minhas-solicitacoes.html">Solicitações</a>
+                <a class="active" href="perfil.html">Perfil</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Tutor</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="section split">
+
+            <div class="panel">
+                <div class="profile-head" style="margin-bottom:22px">
+                    <div class="avatar">J</div>
+                    <div><h2 style="margin-bottom:2px">João da Silva</h2><span class="badge badge--ok">Tutor cadastrado</span></div>
+                </div>
+
+                <form id="formPerfil" class="form-grid" novalidate>
+                    <div class="field"><label for="nome">Nome</label><input type="text" id="nome" value="João da Silva" required></div>
+                    <div class="form-grid two" style="gap:16px">
+                        <div class="field"><label for="cpf">CPF</label><input type="text" id="cpf" value="000.000.000-00"></div>
+                        <div class="field"><label for="telefone">Telefone</label><input type="tel" id="telefone" value="(27) 99999-9999"></div>
+                    </div>
+                    <div class="field"><label for="email">E-mail</label><input type="email" id="email" value="joao@email.com" required></div>
+                    <div id="formAlerta" class="form-alert" role="status"></div>
+                    <button type="submit" class="btn btn--primary btn--block">Atualizar Dados</button>
+                </form>
+            </div>
+
+            <div style="display:grid;gap:18px">
+                <div class="highlight">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+                    <div><strong>Mantenha seus dados atualizados</strong><p>Informações corretas agilizam o contato da equipe do ARCA em suas solicitações.</p></div>
+                </div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6M7 3h7l5 5v11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/></svg></div><h3>3 protocolos emitidos</h3><p>Veja o andamento dos seus pedidos na aba <a href="minhas-solicitacoes.html" style="color:var(--green-700);font-weight:700">Solicitações</a>.</p></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+    <script>
+        document.getElementById("formPerfil").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const alerta = document.getElementById("formAlerta");
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+            if (!nome || !emailOk) {
+                alerta.textContent = "Informe um nome e um e-mail válidos.";
+                alerta.className = "form-alert show form-alert--err";
+                return;
+            }
+            alerta.textContent = "Dados atualizados com sucesso!";
+            alerta.className = "form-alert show form-alert--ok";
+        });
+    </script>
+
+</body>
+
+</html>

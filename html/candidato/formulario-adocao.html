@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Adoção — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="home-candidato.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Portal de Adoção</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu do candidato">
+                <a href="home-candidato.html">Início</a>
+                <a class="active" href="adotar.html">Adotar</a>
+                <a href="acompanhamento-adocao.html">Acompanhamento</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Candidato</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/cachorro.jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">ADOÇÃO RESPONSÁVEL</span>
+                <h1>Formulário de Adoção</h1>
+                <p>Preencha seus dados para iniciar o processo de adoção. Nossa equipe entrará em contato para os próximos passos.</p>
+            </div>
+        </section>
+
+        <section class="section split">
+
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6M7 3h7l5 5v11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/></svg><h2>Seus Dados</h2></div>
+
+                <form id="formAdocao" class="form-grid" novalidate>
+                    <div class="field"><label for="nome">Nome completo</label><input type="text" id="nome" placeholder="Seu nome" required><span class="error-msg"></span></div>
+                    <div class="form-grid two" style="gap:16px">
+                        <div class="field"><label for="cpf">CPF</label><input type="text" id="cpf" placeholder="000.000.000-00" required><span class="error-msg"></span></div>
+                        <div class="field"><label for="telefone">Telefone</label><input type="tel" id="telefone" placeholder="(27) 99999-9999" required><span class="error-msg"></span></div>
+                    </div>
+                    <div class="field"><label for="email">E-mail</label><input type="email" id="email" placeholder="voce@email.com" required><span class="error-msg"></span></div>
+                    <div class="field"><label for="endereco">Endereço</label><input type="text" id="endereco" placeholder="Rua, número, bairro" required><span class="error-msg"></span></div>
+                    <div class="field"><label for="animal">Animal de interesse</label><input type="text" id="animal" value="Thor" required></div>
+                    <div class="field"><label for="moradia">Tipo de moradia</label><select id="moradia"><option>Casa com quintal</option><option>Casa sem quintal</option><option>Apartamento</option></select></div>
+                    <div class="field"><label for="motivo">Por que deseja adotar?</label><textarea id="motivo" placeholder="Conte um pouco sobre você e sua rotina"></textarea></div>
+                    <div id="formAlerta" class="form-alert" role="status"></div>
+                    <button type="submit" class="btn btn--primary btn--block">Enviar Pedido de Adoção</button>
+                </form>
+            </div>
+
+            <div style="display:grid;gap:18px">
+                <div class="highlight">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div>
+                    <div><strong>Adoção consciente</strong><p>A adoção é um compromisso para toda a vida do animal. Avaliamos cada pedido com cuidado e responsabilidade.</p></div>
+                </div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 12 3 3 5-6"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Após o envio</h3><p>Acompanhe a situação do seu pedido na aba <a href="acompanhamento-adocao.html" style="color:var(--green-700);font-weight:700">Acompanhamento</a>.</p></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("formAdocao");
+            const alerta = document.getElementById("formAlerta");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                let valido = true;
+
+                const regras = {
+                    nome: function (v) { return v.trim().length >= 3; },
+                    cpf: function (v) { return v.trim().length >= 11; },
+                    telefone: function (v) { return v.trim().length >= 8; },
+                    email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },
+                    endereco: function (v) { return v.trim() !== ""; }
+                };
+
+                Object.keys(regras).forEach(function (id) {
+                    const campo = document.getElementById(id);
+                    const erro = campo.parentElement.querySelector(".error-msg");
+                    if (!regras[id](campo.value)) {
+                        campo.classList.add("invalid");
+                        if (erro) erro.textContent = "Verifique este campo.";
+                        valido = false;
+                    } else {
+                        campo.classList.remove("invalid");
+                        if (erro) erro.textContent = "";
+                    }
+                });
+
+                if (!valido) {
+                    alerta.textContent = "Confira os campos destacados antes de enviar.";
+                    alerta.className = "form-alert show form-alert--err";
+                    return;
+                }
+
+                alerta.textContent = "Pedido de adoção enviado com sucesso! Em breve entraremos em contato.";
+                alerta.className = "form-alert show form-alert--ok";
+                form.reset();
+                document.getElementById("animal").value = "Thor";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Animal — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="home-candidato.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Portal de Adoção</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu do candidato">
+                <a href="home-candidato.html">Início</a>
+                <a class="active" href="adotar.html">Adotar</a>
+                <a href="acompanhamento-adocao.html">Acompanhamento</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Candidato</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="section" style="margin-top:8px">
+            <a class="btn btn--ghost btn--sm" href="adotar.html">&larr; Voltar para a lista</a>
+        </section>
+
+        <section class="section split" style="grid-template-columns: 1.1fr 1fr; margin-top:18px">
+
+            <div class="panel" style="padding:0;overflow:hidden">
+                <div style="position:relative">
+                    <span class="tag-float">Disponível para adoção</span>
+                    <img src="../../imagens/cachorro.jpg" alt="Thor — cão disponível para adoção" style="width:100%;height:420px;object-fit:cover">
+                </div>
+            </div>
+
+            <div style="display:grid;gap:18px;align-content:start">
+                <div>
+                    <span class="badge badge--ok" style="margin-bottom:10px">Disponível</span>
+                    <h1 style="font-size:2.4rem;margin:6px 0 4px">Thor</h1>
+                    <p style="color:var(--muted)">Cão resgatado pelo Programa ARCA, vacinado, vermifugado e pronto para um novo lar.</p>
+                </div>
+
+                <div class="cards" style="grid-template-columns:1fr 1fr">
+                    <div class="info-card" style="padding:18px"><h3 style="font-size:.95rem;color:var(--muted)">Espécie</h3><p style="color:var(--ink);font-weight:700;font-size:1.05rem">Cachorro</p></div>
+                    <div class="info-card" style="padding:18px"><h3 style="font-size:.95rem;color:var(--muted)">Idade</h3><p style="color:var(--ink);font-weight:700;font-size:1.05rem">6 meses</p></div>
+                    <div class="info-card" style="padding:18px"><h3 style="font-size:.95rem;color:var(--muted)">Sexo</h3><p style="color:var(--ink);font-weight:700;font-size:1.05rem">Macho</p></div>
+                    <div class="info-card" style="padding:18px"><h3 style="font-size:.95rem;color:var(--muted)">Porte</h3><p style="color:var(--ink);font-weight:700;font-size:1.05rem">Médio</p></div>
+                </div>
+
+                <div class="highlight">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+                    <div><strong>Saúde em dia</strong><p>Vacinado, vermifugado e castrado. Acompanha histórico veterinário completo.</p></div>
+                </div>
+
+                <a class="btn btn--primary btn--block" href="formulario-adocao.html">Quero adotar o Thor</a>
+            </div>
+
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Outros animais para adoção</h2><span class="line"></span><a class="chip" href="adotar.html">Ver todos</a></div>
+            <div class="animal-grid">
+                <a class="animal-card" href="detalhes-animal.html"><div class="animal-card__media"><img src="../../imagens/cachorro2.jpg" alt="Mel"></div><div class="animal-card__body"><h3>Mel</h3><div class="animal-card__meta"><span>Cão · 5 anos</span></div><span class="badge badge--ok">Disponível</span></div></a>
+                <a class="animal-card" href="detalhes-animal.html"><div class="animal-card__media"><img src="../../imagens/cachorro3.jpg" alt="Luna"></div><div class="animal-card__body"><h3>Luna</h3><div class="animal-card__meta"><span>Cão · 1 ano</span></div><span class="badge badge--ok">Disponível</span></div></a>
+                <a class="animal-card" href="detalhes-animal.html"><div class="animal-card__media"><img src="../../imagens/Ricota 2.jpg.avif" alt="Ricota"></div><div class="animal-card__body"><h3>Ricota</h3><div class="animal-card__meta"><span>Gato · 2 anos</span></div><span class="badge badge--ok">Disponível</span></div></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+</body>
+
+</html>

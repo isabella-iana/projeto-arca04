@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Solicitações — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="home.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Portal do Tutor</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu do tutor">
+                <a href="home.html">Início</a>
+                <a href="solicitar-resgate.html">Resgate</a>
+                <a href="solicitar-castracao.html">Castração</a>
+                <a class="active" href="minhas-solicitacoes.html">Solicitações</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Tutor</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/images (3).jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">ACOMPANHAMENTO</span>
+                <h1>Minhas Solicitações</h1>
+                <p>Acompanhe o andamento dos seus pedidos de resgate e castração e os protocolos emitidos.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="stats">
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5.2L4 17.2V4Z"/></svg></div><div class="stat__num">2</div><div class="stat__label">Solicitações Ativas</div></div>
+                <div class="stat stat--info"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><div class="stat__num">1</div><div class="stat__label">Castração Agendada</div></div>
+                <div class="stat stat--warn"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6M7 3h7l5 5v11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/></svg></div><div class="stat__num">3</div><div class="stat__label">Protocolos Emitidos</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg><h2>Histórico de Solicitações</h2></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Protocolo</th><th>Serviço</th><th>Data</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>#AR102</strong></td><td>Resgate</td><td>10/05/2026</td><td><span class="badge badge--warn">Em análise</span></td></tr>
+                            <tr><td><strong>#AR103</strong></td><td>Castração</td><td>14/05/2026</td><td><span class="badge badge--info">Agendado</span></td></tr>
+                            <tr><td><strong>#AR098</strong></td><td>Resgate</td><td>02/05/2026</td><td><span class="badge badge--ok">Concluído</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="highlight">
+                <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+                <div><strong>Precisa de um novo atendimento?</strong><p>Você pode abrir uma nova solicitação de <a href="solicitar-resgate.html" style="color:var(--green-700);font-weight:700">resgate</a> ou de <a href="solicitar-castracao.html" style="color:var(--green-700);font-weight:700">castração</a> a qualquer momento.</p></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+</body>
+
+</html>

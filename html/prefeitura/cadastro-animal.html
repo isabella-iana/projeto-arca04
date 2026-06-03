@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Animal — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Prefeitura da Serra</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu administrativo">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="gerenciar-animais.html">Animais</a>
+                <a class="active" href="cadastro-animal.html">Cadastrar</a>
+                <a href="denuncias.html">Denúncias</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="relatorios.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Prefeitura</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/cachorro.jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">NOVO REGISTRO</span>
+                <h1>Cadastrar Animal Resgatado</h1>
+                <p>Registre os dados do animal resgatado para acompanhamento, tratamento e futura adoção.</p>
+            </div>
+        </section>
+
+        <section class="section split">
+
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg><h2>Dados do Animal</h2></div>
+
+                <form id="formCadastro" class="form-grid" novalidate>
+                    <div class="field"><label for="nome">Nome</label><input type="text" id="nome" placeholder="Ex.: Pingo" required><span class="error-msg"></span></div>
+                    <div class="form-grid two" style="gap:16px">
+                        <div class="field"><label for="especie">Espécie</label><select id="especie"><option>Cachorro</option><option>Gato</option></select></div>
+                        <div class="field"><label for="sexo">Sexo</label><select id="sexo"><option>Macho</option><option>Fêmea</option></select></div>
+                    </div>
+                    <div class="form-grid two" style="gap:16px">
+                        <div class="field"><label for="raca">Raça</label><input type="text" id="raca" placeholder="Ex.: SRD" required><span class="error-msg"></span></div>
+                        <div class="field"><label for="idade">Idade aproximada</label><input type="text" id="idade" placeholder="Ex.: 2 anos"></div>
+                    </div>
+                    <div class="field"><label for="local">Local do resgate</label><input type="text" id="local" placeholder="Bairro / endereço" required><span class="error-msg"></span></div>
+                    <div class="field"><label for="obs">Observações</label><textarea id="obs" placeholder="Condições de saúde, comportamento, etc."></textarea></div>
+                    <div id="formAlerta" class="form-alert" role="status"></div>
+                    <button type="submit" class="btn btn--primary btn--block">Cadastrar Animal</button>
+                </form>
+            </div>
+
+            <div style="display:grid;gap:18px">
+                <div class="highlight">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+                    <div><strong>Por que cadastrar?</strong><p>O cadastro garante o histórico do animal, agiliza o atendimento veterinário e facilita a adoção responsável.</p></div>
+                </div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Avaliação clínica</h3><p>Após o cadastro, o animal é encaminhado para avaliação veterinária e início do tratamento, se necessário.</p></div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg></div><h3>Disponível para adoção</h3><p>Quando recuperado, o animal passa a constar na lista de adoção do programa.</p></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("formCadastro");
+            const alerta = document.getElementById("formAlerta");
+            const obrigatorios = ["nome", "raca", "local"];
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                let valido = true;
+
+                obrigatorios.forEach(function (id) {
+                    const campo = document.getElementById(id);
+                    const erro = campo.parentElement.querySelector(".error-msg");
+                    if (!campo.value.trim()) {
+                        campo.classList.add("invalid");
+                        if (erro) erro.textContent = "Campo obrigatório.";
+                        valido = false;
+                    } else {
+                        campo.classList.remove("invalid");
+                        if (erro) erro.textContent = "";
+                    }
+                });
+
+                if (!valido) {
+                    alerta.textContent = "Preencha os campos obrigatórios destacados.";
+                    alerta.className = "form-alert show form-alert--err";
+                    return;
+                }
+
+                alerta.textContent = "Animal cadastrado com sucesso! Encaminhado para avaliação veterinária.";
+                alerta.className = "form-alert show form-alert--ok";
+                form.reset();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

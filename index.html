@@ -1,126 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto ARCA</title>
-<link rel="stylesheet" href="./css/style_02.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programa ARCA da Prefeitura da Serra — resgate, proteção, saúde e adoção responsável de animais.">
+    <title>Programa ARCA — Prefeitura da Serra</title>
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
 
-<main class="container">
+    <main class="container">
 
-<section class="institucional">
+        <section class="institucional">
 
-<img src="./imagens/logo_arca.png" alt="Programa ARCA" class="logo">
+            <img src="./imagens/logo_arca.png" alt="Programa ARCA — Prefeitura da Serra" class="logo">
 
-<h1>Cuidar é transformar vidas</h1>
+            <span class="eyebrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                PREFEITURA DA SERRA · MEIO AMBIENTE
+            </span>
 
-<p>
-O Programa ARCA da Prefeitura da Serra atua no resgate,
-tratamento, castração e adoção responsável de cães e gatos
-em situação de vulnerabilidade.
-</p>
+            <h1>Cuidar é transformar vidas</h1>
 
-<div class="servicos">
+            <p>
+                O Programa ARCA atua no resgate, tratamento, castração e adoção
+                responsável de cães e gatos em situação de vulnerabilidade no
+                município da Serra.
+            </p>
 
-<div class="servico">
-<h3>Resgate</h3>
-<p>Animais feridos</p>
-</div>
+            <div class="servicos">
+                <div class="servico">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div>
+                    <div><h3>Resgate</h3><p>Animais feridos e abandonados</p></div>
+                </div>
+                <div class="servico">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z"/></svg></div>
+                    <div><h3>Proteção</h3><p>Combate aos maus-tratos</p></div>
+                </div>
+                <div class="servico">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                    <div><h3>Saúde</h3><p>Castração e tratamento</p></div>
+                </div>
+                <div class="servico">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg></div>
+                    <div><h3>Adoção</h3><p>Novos lares responsáveis</p></div>
+                </div>
+            </div>
 
-<div class="servico">
-<h3>Proteção</h3>
-<p>Combate aos maus-tratos</p>
-</div>
+            <div class="frase">
+                Cada atitude de amor faz a diferença na vida de um animal.
+            </div>
 
-<div class="servico">
-<h3>Saúde</h3>
-<p>Castração e tratamento</p>
-</div>
+        </section>
 
-<div class="servico">
-<h3>Adoção</h3>
-<p>Novos lares</p>
-</div>
+        <section class="galeria" aria-label="Animais do Programa ARCA">
+            <figure><img src="./imagens/download (1).jpg" alt="Cão resgatado pelo Programa ARCA"></figure>
+            <figure><img src="./imagens/download.jpg" alt="Animal em cuidados"></figure>
+            <figure><img src="./imagens/images (1).jpg" alt="Cão disponível para adoção"></figure>
+            <figure><img src="./imagens/images (2).jpg" alt="Animal acolhido pelo programa"></figure>
+            <figure><img src="./imagens/images (3).jpg" alt="Cão em recuperação"></figure>
+            <figure><img src="./imagens/images.jpg" alt="Animal resgatado"></figure>
+        </section>
 
-</div>
+        <section class="login" aria-label="Acesso ao sistema">
 
-<div class="frase">
-Cada atitude de amor faz a diferença na vida de um animal.
-</div>
+            <div class="tag">SISTEMA WEB · ACESSO RESTRITO</div>
 
-</section>
+            <h2>Acessar o sistema</h2>
+            <p>Informe suas credenciais para continuar.</p>
 
-<section class="galeria">
+            <form id="loginForm" novalidate>
 
-<img src="./imagens/download (1).jpg" alt="">
-<img src="./imagens/download.jpg" alt="">
-<img src="./imagens/images (1).jpg" alt="">
-<img src="./imagens/images (2).jpg" alt="">
-<img src="./imagens/images (3).jpg" alt="">
-<img src="./imagens/images.jpg" alt="">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Digite o usuário" autocomplete="username" required>
 
-</section>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite a senha" autocomplete="current-password" required>
 
-<section class="login">
+                <p id="loginMsg" class="login-msg" role="alert"></p>
 
-<div class="tag">
-SISTEMA WEB
-</div>
+                <button type="submit">Entrar</button>
+            </form>
 
-<h2>Acessar o sistema</h2>
+            <div class="info">Acesso restrito a usuários autorizados.</div>
 
-<p>
-Informe suas credenciais para continuar
-</p>
+            <div class="prefeitura">
+                PREFEITURA DA SERRA<br>
+                Secretaria de Meio Ambiente
+            </div>
 
-<form id="loginForm">
+        </section>
 
-<label>Usuário</label>
+    </main>
 
-<input
-type="text"
-id="usuario"
-placeholder="Digite o usuário"
-required
->
+    <footer>
+        Juntos por uma Serra mais justa, humana e amiga dos animais.
+    </footer>
 
-<label>Senha</label>
-
-<input
-type="password"
-id="senha"
-placeholder="Digite a senha"
-required
->
-
-<button type="submit">
-Entrar
-</button>
-
-</form>
-
-<div class="info">
-Acesso restrito para usuários autorizados
-</div>
-
-<div class="prefeitura">
-PREFEITURA DA SERRA
-<br>
-Secretaria de Meio Ambiente
-</div>
-
-</section>
-
-</main>
-
-<footer>
-Juntos por uma Serra mais justa, humana e amiga dos animais.
-</footer>
-
-<script src="./js/login.js"></script>
+    <script src="./javascript/login.js"></script>
 
 </body>
+
 </html>

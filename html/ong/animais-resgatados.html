@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais Resgatados — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard-ong.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Parceiro · ONG</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu da ONG">
+                <a href="dashboard-ong.html">Dashboard</a>
+                <a class="active" href="animais-resgatados.html">Resgatados</a>
+                <a href="cadastro-animal-ong.html">Cadastrar</a>
+                <a href="relatorios-ong.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>ONG</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/cachorro2.jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">HISTÓRICO DE RESGATES</span>
+                <h1>Animais Resgatados</h1>
+                <p>Todos os animais resgatados pela organização, com status atualizado de tratamento e adoção.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="stats">
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div><div class="stat__num">82</div><div class="stat__label">Total Resgatados</div></div>
+                <div class="stat stat--ok"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg></div><div class="stat__num">28</div><div class="stat__label">Disponíveis</div></div>
+                <div class="stat stat--warn"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="stat__num">17</div><div class="stat__label">Em Tratamento</div></div>
+                <div class="stat stat--info"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><div class="stat__num">37</div><div class="stat__label">Adotados</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Galeria de resgatados</h2><span class="line"></span></div>
+            <div class="animal-grid">
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Em tratamento</span><img src="../../imagens/cachorro4.webp" alt="Pingo"></div><div class="animal-card__body"><h3>Pingo</h3><div class="animal-card__meta"><span>Cão · resgatado 20/05</span></div><span class="badge badge--warn">Em tratamento</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/cachorro2.jpg" alt="Bidu"></div><div class="animal-card__body"><h3>Bidu</h3><div class="animal-card__meta"><span>Cão · resgatado 18/05</span></div><span class="badge badge--ok">Disponível</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Observação</span><img src="../../imagens/fofo.jpg" alt="Fofo"></div><div class="animal-card__body"><h3>Fofo</h3><div class="animal-card__meta"><span>Gato · resgatado 15/05</span></div><span class="badge badge--info">Em observação</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/images.jpg" alt="Pretinha"></div><div class="animal-card__body"><h3>Pretinha</h3><div class="animal-card__meta"><span>Cão · resgatado 12/05</span></div><span class="badge badge--ok">Disponível</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Adotado</span><img src="../../imagens/images (1).jpg" alt="Rex"></div><div class="animal-card__body"><h3>Rex</h3><div class="animal-card__meta"><span>Cão · resgatado 02/05</span></div><span class="badge badge--info">Adotado</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/images (2).jpg" alt="Amora"></div><div class="animal-card__body"><h3>Amora</h3><div class="animal-card__meta"><span>Cão · resgatado 28/04</span></div><span class="badge badge--ok">Disponível</span></div></article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg><h2>Registro detalhado</h2></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Animal</th><th>Espécie</th><th>Data do Resgate</th><th>Local</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Pingo</strong></td><td>Cachorro</td><td>20/05/2026</td><td>Carapina</td><td><span class="badge badge--warn">Em tratamento</span></td></tr>
+                            <tr><td><strong>Bidu</strong></td><td>Cachorro</td><td>18/05/2026</td><td>Jacaraípe</td><td><span class="badge badge--ok">Disponível</span></td></tr>
+                            <tr><td><strong>Fofo</strong></td><td>Gato</td><td>15/05/2026</td><td>Serra Sede</td><td><span class="badge badge--info">Em observação</span></td></tr>
+                            <tr><td><strong>Pretinha</strong></td><td>Cachorro</td><td>12/05/2026</td><td>Nova Almeida</td><td><span class="badge badge--ok">Disponível</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+</body>
+
+</html>
