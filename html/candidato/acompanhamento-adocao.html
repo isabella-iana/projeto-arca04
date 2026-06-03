@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhamento de Adoção — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="home-candidato.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Portal de Adoção</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu do candidato">
+                <a href="home-candidato.html">Início</a>
+                <a href="adotar.html">Adotar</a>
+                <a class="active" href="acompanhamento-adocao.html">Acompanhamento</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Candidato</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/images (1).jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">MEUS PEDIDOS</span>
+                <h1>Acompanhamento da Adoção</h1>
+                <p>Veja em tempo real a situação dos seus pedidos de adoção junto ao Programa ARCA.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="stats">
+                <div class="stat stat--warn"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div class="stat__num">1</div><div class="stat__label">Em Análise</div></div>
+                <div class="stat stat--info"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><div class="stat__num">1</div><div class="stat__label">Visita Agendada</div></div>
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><div class="stat__num">1</div><div class="stat__label">Adoção Concluída</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg><h2>Meus Pedidos de Adoção</h2></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Protocolo</th><th>Animal</th><th>Data do Pedido</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>#AD201</strong></td><td>Thor</td><td>20/05/2026</td><td><span class="badge badge--warn">Em análise</span></td></tr>
+                            <tr><td><strong>#AD198</strong></td><td>Luna</td><td>16/05/2026</td><td><span class="badge badge--info">Visita agendada</span></td></tr>
+                            <tr><td><strong>#AD180</strong></td><td>Bob</td><td>05/05/2026</td><td><span class="badge badge--ok">Adoção concluída</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Etapas do processo</h2><span class="line"></span></div>
+            <div class="cards">
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6M7 3h7l5 5v11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/></svg></div><h3>Pedido enviado</h3><p>Seu formulário foi recebido e está na fila de análise.</p></div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Análise</h3><p>A equipe avalia o perfil e entra em contato para uma visita.</p></div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><h3>Adoção concluída</h3><p>Após aprovação, o animal vai para o seu novo lar.</p></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+</body>
+
+</html>

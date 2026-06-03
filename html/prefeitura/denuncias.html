@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Denúncias — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Prefeitura da Serra</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu administrativo">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="gerenciar-animais.html">Animais</a>
+                <a href="cadastro-animal.html">Cadastrar</a>
+                <a class="active" href="denuncias.html">Denúncias</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="relatorios.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Prefeitura</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/cachorro6.webp" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">PROTEÇÃO ANIMAL</span>
+                <h1>Gerenciamento de Denúncias</h1>
+                <p>Acompanhe e gerencie as denúncias de maus-tratos e abandono recebidas pelo Programa ARCA.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="stats">
+                <div class="stat stat--danger"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></div><div class="stat__num">38</div><div class="stat__label">Denúncias Ativas</div></div>
+                <div class="stat stat--warn"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><div class="stat__num">12</div><div class="stat__label">Em Análise</div></div>
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div><div class="stat__num">95</div><div class="stat__label">Resolvidas</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h18M6 9h12M9 14h6M11 19h2"/></svg><h2>Lista de Denúncias</h2></div>
+
+                <div class="form-grid two" style="grid-template-columns: 1fr 200px auto; align-items:end; margin-bottom:18px;">
+                    <div class="field"><label for="buscaProtocolo">Pesquisar protocolo</label><input type="text" id="buscaProtocolo" placeholder="Ex.: #AR001"></div>
+                    <div class="field"><label for="filtroStatus">Status</label>
+                        <select id="filtroStatus"><option>Todos</option><option>Urgente</option><option>Em Análise</option><option>Resolvido</option></select>
+                    </div>
+                    <button type="button" id="btnPesquisar" class="btn btn--primary">Pesquisar</button>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Protocolo</th><th>Bairro</th><th>Data</th><th>Prioridade</th><th>Status</th><th>Ações</th></tr></thead>
+                        <tbody id="listaDenuncias">
+                            <tr data-status="Em Análise">
+                                <td><strong>#AR001</strong></td><td>Nova Almeida</td><td>12/05/2026</td>
+                                <td><span class="badge badge--danger">Alta</span></td>
+                                <td class="cel-status"><span class="badge badge--warn">Em Análise</span></td>
+                                <td><div class="row-actions"><button class="btn btn--primary btn--sm acao-atender">Atender</button><button class="btn btn--ghost btn--sm acao-detalhes">Detalhes</button></div></td>
+                            </tr>
+                            <tr data-status="Em Análise">
+                                <td><strong>#AR002</strong></td><td>Laranjeiras</td><td>15/05/2026</td>
+                                <td><span class="badge badge--warn">Média</span></td>
+                                <td class="cel-status"><span class="badge badge--muted">Pendente</span></td>
+                                <td><div class="row-actions"><button class="btn btn--primary btn--sm acao-atender">Atender</button><button class="btn btn--ghost btn--sm acao-detalhes">Detalhes</button></div></td>
+                            </tr>
+                            <tr data-status="Urgente">
+                                <td><strong>#AR003</strong></td><td>Feu Rosa</td><td>18/05/2026</td>
+                                <td><span class="badge badge--danger">Alta</span></td>
+                                <td class="cel-status"><span class="badge badge--muted">Pendente</span></td>
+                                <td><div class="row-actions"><button class="btn btn--primary btn--sm acao-atender">Atender</button><button class="btn btn--ghost btn--sm acao-detalhes">Detalhes</button></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+    <script src="../../javascript/denuncias.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da ONG — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard-ong.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Parceiro · ONG</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu da ONG">
+                <a class="active" href="dashboard-ong.html">Dashboard</a>
+                <a href="animais-resgatados.html">Resgatados</a>
+                <a href="cadastro-animal-ong.html">Cadastrar</a>
+                <a href="relatorios-ong.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>ONG</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/images (3).jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">ORGANIZAÇÃO PARCEIRA</span>
+                <h1>Painel da ONG</h1>
+                <p>Acompanhe os resgates realizados, os animais cadastrados e as estatísticas da sua organização no Programa ARCA.</p>
+                <div class="banner__cta">
+                    <a class="btn btn--light" href="cadastro-animal-ong.html">Cadastrar resgate</a>
+                    <a class="btn btn--ghost" href="animais-resgatados.html" style="color:#fff;border-color:rgba(255,255,255,.5)">Ver resgatados</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Estatísticas da ONG</h2><span class="line"></span><span class="chip">Atualizado hoje</span></div>
+            <div class="stats">
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div><div class="stat__num">82</div><div class="stat__label">Resgates Realizados</div></div>
+                <div class="stat stat--info"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></div><div class="stat__num">54</div><div class="stat__label">Animais Cadastrados</div></div>
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><div class="stat__num">37</div><div class="stat__label">Adotados</div></div>
+                <div class="stat stat--warn"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="stat__num">17</div><div class="stat__label">Em Tratamento</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Acesso rápido</h2><span class="line"></span></div>
+            <div class="cards">
+                <a class="info-card" href="cadastro-animal-ong.html"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div><h3>Cadastrar Animal</h3><p>Registre um novo animal resgatado pela ONG.</p></a>
+                <a class="info-card" href="animais-resgatados.html"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div><h3>Animais Resgatados</h3><p>Veja todos os animais resgatados pela organização.</p></a>
+                <a class="info-card" href="relatorios-ong.html"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m0 14h16M8 16v-5m4 5V8m4 8v-3"/></svg></div><h3>Relatórios</h3><p>Acompanhe os indicadores e resultados da ONG.</p></a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Resgates recentes</h2><span class="line"></span><a class="chip" href="animais-resgatados.html">Ver todos</a></div>
+            <div class="animal-grid">
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Resgatado</span><img src="../../imagens/cachorro4.webp" alt="Animal resgatado"></div><div class="animal-card__body"><h3>Pingo</h3><div class="animal-card__meta"><span>Resgatado em 20/05</span></div><span class="badge badge--warn">Em tratamento</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Resgatado</span><img src="../../imagens/cachorro2.jpg" alt="Animal resgatado"></div><div class="animal-card__body"><h3>Bidu</h3><div class="animal-card__meta"><span>Resgatado em 18/05</span></div><span class="badge badge--ok">Disponível</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Resgatado</span><img src="../../imagens/fofo.jpg" alt="Animal resgatado"></div><div class="animal-card__body"><h3>Fofo</h3><div class="animal-card__meta"><span>Resgatado em 15/05</span></div><span class="badge badge--info">Em observação</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Resgatado</span><img src="../../imagens/images.jpg" alt="Animal resgatado"></div><div class="animal-card__body"><h3>Pretinha</h3><div class="animal-card__meta"><span>Resgatado em 12/05</span></div><span class="badge badge--ok">Disponível</span></div></article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Animal — ONG — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard-ong.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Parceiro · ONG</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu da ONG">
+                <a href="dashboard-ong.html">Dashboard</a>
+                <a href="animais-resgatados.html">Resgatados</a>
+                <a class="active" href="cadastro-animal-ong.html">Cadastrar</a>
+                <a href="relatorios-ong.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>ONG</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/cachorro6.webp" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">NOVO RESGATE</span>
+                <h1>Cadastrar Animal Resgatado</h1>
+                <p>Registre os animais resgatados pela sua organização para que entrem no fluxo de tratamento e adoção do ARCA.</p>
+            </div>
+        </section>
+
+        <section class="section split">
+
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg><h2>Dados do Resgate</h2></div>
+
+                <form id="formCadastroOng" class="form-grid" novalidate>
+                    <div class="field"><label for="nome">Nome / Identificação</label><input type="text" id="nome" placeholder="Ex.: Pingo" required><span class="error-msg"></span></div>
+                    <div class="form-grid two" style="gap:16px">
+                        <div class="field"><label for="especie">Espécie</label><select id="especie"><option>Cachorro</option><option>Gato</option></select></div>
+                        <div class="field"><label for="porte">Porte</label><select id="porte"><option>Pequeno</option><option>Médio</option><option>Grande</option></select></div>
+                    </div>
+                    <div class="field"><label for="local">Local do resgate</label><input type="text" id="local" placeholder="Bairro / endereço" required><span class="error-msg"></span></div>
+                    <div class="field"><label for="data">Data do resgate</label><input type="date" id="data" required><span class="error-msg"></span></div>
+                    <div class="field"><label for="status">Status</label><select id="status"><option>Em Tratamento</option><option>Em Observação</option><option>Disponível</option></select></div>
+                    <div class="field"><label for="obs">Observações</label><textarea id="obs" placeholder="Estado de saúde, comportamento, etc."></textarea></div>
+                    <div id="formAlerta" class="form-alert" role="status"></div>
+                    <button type="submit" class="btn btn--primary btn--block">Cadastrar Resgate</button>
+                </form>
+            </div>
+
+            <div style="display:grid;gap:18px">
+                <div class="highlight">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div>
+                    <div><strong>Parceria pelos animais</strong><p>Cada resgate cadastrado fortalece a rede de proteção animal do município da Serra.</p></div>
+                </div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Encaminhamento</h3><p>Após o cadastro, o animal entra no fluxo de tratamento e fica disponível para adoção quando recuperado.</p></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("formCadastroOng");
+            const alerta = document.getElementById("formAlerta");
+            const obrigatorios = ["nome", "local", "data"];
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                let valido = true;
+                obrigatorios.forEach(function (id) {
+                    const campo = document.getElementById(id);
+                    const erro = campo.parentElement.querySelector(".error-msg");
+                    if (!campo.value.trim()) {
+                        campo.classList.add("invalid");
+                        if (erro) erro.textContent = "Campo obrigatório.";
+                        valido = false;
+                    } else {
+                        campo.classList.remove("invalid");
+                        if (erro) erro.textContent = "";
+                    }
+                });
+
+                if (!valido) {
+                    alerta.textContent = "Preencha os campos obrigatórios destacados.";
+                    alerta.className = "form-alert show form-alert--err";
+                    return;
+                }
+                alerta.textContent = "Resgate cadastrado com sucesso!";
+                alerta.className = "form-alert show form-alert--ok";
+                form.reset();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

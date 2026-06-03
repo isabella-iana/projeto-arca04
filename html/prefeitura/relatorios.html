@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Prefeitura da Serra</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu administrativo">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="gerenciar-animais.html">Animais</a>
+                <a href="cadastro-animal.html">Cadastrar</a>
+                <a href="denuncias.html">Denúncias</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a class="active" href="relatorios.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Prefeitura</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/images (2).jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">DADOS DO PROGRAMA</span>
+                <h1>Relatórios Gerais</h1>
+                <p>Acompanhe resgates, denúncias, adoções e atendimentos veterinários do Programa ARCA.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Visão geral</h2><span class="line"></span></div>
+            <div class="stats">
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div><div class="stat__num">245</div><div class="stat__label">Animais Resgatados</div></div>
+                <div class="stat stat--danger"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></div><div class="stat__num">38</div><div class="stat__label">Denúncias Ativas</div></div>
+                <div class="stat stat--info"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg></div><div class="stat__num">120</div><div class="stat__label">Adoções Realizadas</div></div>
+                <div class="stat stat--warn"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="stat__num">67</div><div class="stat__label">Atendimentos Médicos</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m0 14h16M8 16v-5m4 5V8m4 8v-3"/></svg><h2>Resumo Geral</h2></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Categoria</th><th>Quantidade</th><th>Situação</th></tr></thead>
+                        <tbody>
+                            <tr><td>Animais Resgatados</td><td>245</td><td><span class="badge badge--info">Em acompanhamento</span></td></tr>
+                            <tr><td>Denúncias Ativas</td><td>38</td><td><span class="badge badge--warn">Aguardando análise</span></td></tr>
+                            <tr><td>Adoções Realizadas</td><td>120</td><td><span class="badge badge--ok">Concluídas</span></td></tr>
+                            <tr><td>Atendimentos Médicos</td><td>67</td><td><span class="badge badge--info">Registrados</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Relatório de Animais</h2><span class="line"></span></div>
+            <div class="cards">
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg></div><h3>Disponíveis para adoção</h3><p>6 animais cadastrados como disponíveis.</p></div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Em tratamento</h3><p>18 animais recebem acompanhamento veterinário.</p></div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><h3>Adotados</h3><p>120 animais já foram adotados pelo programa.</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg><h2>Relatório de Denúncias</h2></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Tipo</th><th>Quantidade</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>Maus-tratos</td><td>21</td><td><span class="badge badge--warn">Em investigação</span></td></tr>
+                            <tr><td>Abandono</td><td>12</td><td><span class="badge badge--info">Aguardando atendimento</span></td></tr>
+                            <tr><td>Animal ferido</td><td>5</td><td><span class="badge badge--danger">Prioridade alta</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Resgate — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="home.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Portal do Tutor</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu do tutor">
+                <a href="home.html">Início</a>
+                <a class="active" href="solicitar-resgate.html">Resgate</a>
+                <a href="solicitar-castracao.html">Castração</a>
+                <a href="minhas-solicitacoes.html">Solicitações</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Tutor</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/fofo.jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">ATENDIMENTO PRIORITÁRIO</span>
+                <h1>Solicitação de Resgate</h1>
+                <p>Encontrou um animal ferido, abandonado ou em situação de risco? Registre a solicitação e nossa equipe entrará em contato.</p>
+            </div>
+        </section>
+
+        <section class="section split">
+
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg><h2>Dados da Solicitação</h2></div>
+
+                <form id="formResgate" class="form-grid" novalidate>
+                    <div class="field"><label for="nome">Seu nome</label><input type="text" id="nome" placeholder="Nome completo" required></div>
+                    <div class="field"><label for="telefone">Telefone</label><input type="tel" id="telefone" placeholder="(27) 99999-9999" required></div>
+                    <div class="field"><label for="endereco">Endereço / local do animal</label><input type="text" id="endereco" placeholder="Rua, número, bairro" required></div>
+                    <div class="field"><label for="descricao">Descrição da situação</label><textarea id="descricao" placeholder="Descreva o estado do animal e o local" required></textarea></div>
+                    <div class="field"><label for="foto">Foto (opcional)</label><input type="file" id="foto" accept="image/*"></div>
+                    <div id="formAlerta" class="form-alert" role="status"></div>
+                    <button type="submit" class="btn btn--primary btn--block">Enviar Solicitação</button>
+                </form>
+            </div>
+
+            <div style="display:grid;gap:18px">
+                <div class="highlight">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                    <div><strong>Em caso de emergência</strong><p>Animais em risco de vida têm atendimento prioritário. Forneça o endereço com o máximo de detalhes possível.</p></div>
+                </div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6M7 3h7l5 5v11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/></svg></div><h3>Protocolo</h3><p>Ao enviar, você receberá um número de protocolo para acompanhar a solicitação na aba “Solicitações”.</p></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+    <script>
+        document.getElementById("formResgate").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const alerta = document.getElementById("formAlerta");
+            const campos = ["nome", "telefone", "endereco", "descricao"];
+            const ok = campos.every(function (id) { return document.getElementById(id).value.trim() !== ""; });
+
+            if (!ok) {
+                alerta.textContent = "Preencha todos os campos obrigatórios.";
+                alerta.className = "form-alert show form-alert--err";
+                return;
+            }
+            const protocolo = "#AR" + Math.floor(100 + Math.random() * 900);
+            alerta.textContent = "Solicitação enviada com sucesso! Protocolo " + protocolo + ".";
+            alerta.className = "form-alert show form-alert--ok";
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>

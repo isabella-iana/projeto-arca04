@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard.html">
+                <img src="../../imagens/logo_arca.png" alt="ARCA">
+                <span>ARCA<small>Prefeitura da Serra</small></span>
+            </a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu administrativo">
+                <a class="active" href="dashboard.html">Dashboard</a>
+                <a href="gerenciar-animais.html">Animais</a>
+                <a href="cadastro-animal.html">Cadastrar</a>
+                <a href="denuncias.html">Denúncias</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="relatorios.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Prefeitura</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <!-- Banner institucional -->
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/cachorro5.jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">PAINEL ADMINISTRATIVO</span>
+                <h1>Gestão do Programa ARCA</h1>
+                <p>Acompanhe denúncias, animais cadastrados, atendimentos veterinários e adoções em um só lugar.</p>
+                <div class="banner__cta">
+                    <a class="btn btn--light" href="cadastro-animal.html">Cadastrar animal</a>
+                    <a class="btn btn--ghost" href="relatorios.html" style="color:#fff;border-color:rgba(255,255,255,.5)">Ver relatórios</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Indicadores -->
+        <section class="section">
+            <div class="section__head"><h2>Indicadores gerais</h2><span class="line"></span><span class="chip">Atualizado hoje</span></div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div>
+                    <div class="stat__num">245</div><div class="stat__label">Animais Resgatados</div>
+                </div>
+                <div class="stat stat--danger">
+                    <div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></div>
+                    <div class="stat__num">38</div><div class="stat__label">Denúncias Ativas</div>
+                </div>
+                <div class="stat stat--info">
+                    <div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg></div>
+                    <div class="stat__num">120</div><div class="stat__label">Adoções Realizadas</div>
+                </div>
+                <div class="stat stat--warn">
+                    <div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                    <div class="stat__num">67</div><div class="stat__label">Atendimentos Médicos</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acesso rápido -->
+        <section class="section">
+            <div class="section__head"><h2>Acesso rápido</h2><span class="line"></span></div>
+            <div class="cards">
+                <a class="info-card" href="gerenciar-animais.html">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+                    <h3>Gerenciar Animais</h3><p>Cadastre, edite e acompanhe os animais resgatados.</p>
+                </a>
+                <a class="info-card" href="denuncias.html">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></div>
+                    <h3>Gerenciar Denúncias</h3><p>Receba e acompanhe denúncias de maus-tratos.</p>
+                </a>
+                <a class="info-card" href="atendimento.html">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                    <h3>Atendimento Médico</h3><p>Registre consultas e acompanhamento clínico.</p>
+                </a>
+                <a class="info-card" href="relatorios.html">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m0 14h16M8 16v-5m4 5V8m4 8v-3"/></svg></div>
+                    <h3>Relatórios</h3><p>Visualize os dados gerais do programa.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Animais para adoção -->
+        <section class="section">
+            <div class="section__head"><h2>Animais disponíveis para adoção</h2><span class="line"></span><span class="chip">6 disponíveis</span></div>
+            <div class="animal-grid">
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/cachorro.jpg" alt="Thor, cão disponível para adoção"></div><div class="animal-card__body"><h3>Thor</h3><div class="animal-card__meta"><span>Cão · 6 meses</span></div><span class="badge badge--ok">Pronto para adoção</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/cachorro2.jpg" alt="Mel, cão disponível para adoção"></div><div class="animal-card__body"><h3>Mel</h3><div class="animal-card__meta"><span>Cão · 5 anos</span></div><span class="badge badge--ok">Pronto para adoção</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/cachorro3.jpg" alt="Luna, cão disponível para adoção"></div><div class="animal-card__body"><h3>Luna</h3><div class="animal-card__meta"><span>Cão · 1 ano</span></div><span class="badge badge--ok">Pronto para adoção</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/cachorro4.webp" alt="Bob, cão disponível para adoção"></div><div class="animal-card__body"><h3>Bob</h3><div class="animal-card__meta"><span>Cão · 9 meses</span></div><span class="badge badge--ok">Pronto para adoção</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/cachorro5.jpg" alt="Nina, cão disponível para adoção"></div><div class="animal-card__body"><h3>Nina</h3><div class="animal-card__meta"><span>Cão · 2 anos</span></div><span class="badge badge--ok">Pronto para adoção</span></div></article>
+                <article class="animal-card"><div class="animal-card__media"><span class="tag-float">Disponível</span><img src="../../imagens/cachorro6.webp" alt="Max, cão disponível para adoção"></div><div class="animal-card__body"><h3>Max</h3><div class="animal-card__meta"><span>Cão · 7 anos</span></div><span class="badge badge--ok">Pronto para adoção</span></div></article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+</body>
+
+</html>

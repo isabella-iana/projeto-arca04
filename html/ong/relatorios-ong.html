@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios — ONG — ARCA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="dashboard-ong.html"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>ARCA<small>Parceiro · ONG</small></span></a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="nav-burger" aria-label="Abrir menu"><span></span></label>
+            <nav class="main-nav" aria-label="Menu da ONG">
+                <a href="dashboard-ong.html">Dashboard</a>
+                <a href="animais-resgatados.html">Resgatados</a>
+                <a href="cadastro-animal-ong.html">Cadastrar</a>
+                <a class="active" href="relatorios-ong.html">Relatórios</a>
+            </nav>
+            <div class="user-area">
+                <span class="user-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>ONG</span>
+                <a class="btn-logout" href="../../index.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <section class="banner">
+            <img class="banner__bg" src="../../imagens/images (2).jpg" alt="">
+            <div class="banner__overlay">
+                <span class="eyebrow">RESULTADOS DA ONG</span>
+                <h1>Relatórios da Organização</h1>
+                <p>Indicadores de resgates, tratamentos e adoções realizados pela sua organização no Programa ARCA.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Resumo do período</h2><span class="line"></span></div>
+            <div class="stats">
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 8 5 9.5 7 12 9.5 14.5 7 16 5 18.5 5 22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21Z"/></svg></div><div class="stat__num">82</div><div class="stat__label">Resgates</div></div>
+                <div class="stat stat--info"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><div class="stat__num">37</div><div class="stat__label">Adoções</div></div>
+                <div class="stat stat--warn"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="stat__num">120</div><div class="stat__label">Atendimentos</div></div>
+                <div class="stat"><div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg></div><div class="stat__num">28</div><div class="stat__label">Disponíveis</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <div class="panel__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m0 14h16M8 16v-5m4 5V8m4 8v-3"/></svg><h2>Desempenho por mês</h2></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Mês</th><th>Resgates</th><th>Adoções</th><th>Situação</th></tr></thead>
+                        <tbody>
+                            <tr><td>Março</td><td>24</td><td>9</td><td><span class="badge badge--ok">Concluído</span></td></tr>
+                            <tr><td>Abril</td><td>31</td><td>13</td><td><span class="badge badge--ok">Concluído</span></td></tr>
+                            <tr><td>Maio</td><td>27</td><td>15</td><td><span class="badge badge--info">Em andamento</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head"><h2>Distribuição dos animais</h2><span class="line"></span></div>
+            <div class="cards">
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg></div><h3>28 disponíveis</h3><p>Animais recuperados e prontos para adoção.</p></div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>17 em tratamento</h3><p>Animais em acompanhamento veterinário.</p></div>
+                <div class="info-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><h3>37 adotados</h3><p>Animais que já encontraram um novo lar.</p></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand"><img src="../../imagens/logo_arca.png" alt="ARCA"><span>Programa ARCA</span></div>
+            <p>Juntos por uma Serra mais justa, humana e amiga dos animais.</p>
+        </div>
+        <div class="footer__bar">© Prefeitura da Serra · Secretaria de Meio Ambiente</div>
+    </footer>
+
+</body>
+
+</html>
