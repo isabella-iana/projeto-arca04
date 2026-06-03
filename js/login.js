@@ -14,14 +14,12 @@ document
             usuario === "prefeitura" &&
             senha === "pref@456"
         ){
-            alert("Login realizado com sucesso!");
             window.location.href = "./paginas/dashboard.html";
 
         } else if (
             usuario === "tutor" &&
             senha === "123456"
         ) {
-            alert("Lgin realizado com sucesso!")
             window.location.href = "./paginas/home.html";
         } else if (
             usuario === "candidato" &&
