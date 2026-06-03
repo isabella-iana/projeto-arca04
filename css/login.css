@@ -81,8 +81,6 @@ img { display: block; max-width: 100%; }
     box-shadow: 0 10px 24px rgba(27, 94, 32, .14); transition: .3s;
 }
 .galeria figure { position: relative; overflow: hidden; border-radius: 18px; }
-.galeria figure:nth-child(1) { grid-column: span 2; }
-.galeria figure:nth-child(1) img { min-height: 200px; }
 .galeria img:hover { transform: scale(1.04); }
 .login {
     background: #fff; padding: 38px; border-radius: 26px; box-shadow: var(--shadow);
