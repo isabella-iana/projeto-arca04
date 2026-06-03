@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("loginForm");
     const msg = document.getElementById("loginMsg");
 
-    // Perfis de acesso (mesmos usuários e senhas do sistema original)
     const credenciais = {
         prefeitura: { senha: "pref@456", destino: "html/prefeitura/dashboard.html" },
         tutor:      { senha: "123456",   destino: "html/tutor/home.html" },
