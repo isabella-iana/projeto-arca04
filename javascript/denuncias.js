@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     busca.addEventListener("input", aplicarFiltro);
     filtro.addEventListener("change", aplicarFiltro);
 
-    // Ações das linhas (Atender / Detalhes)
     corpo.addEventListener("click", function (e) {
         const tr = e.target.closest("tr");
         if (!tr) return;
