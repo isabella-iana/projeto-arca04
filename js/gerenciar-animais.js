@@ -25,9 +25,8 @@ const animais = [
     },
     {
         nome: "Nina",
-        especie: "Gato",
-        raca: "SRD"
-,
+        especie: "Cachorro",
+        raca: "Vira-lata",
         status: "Adotado"
     },
     {

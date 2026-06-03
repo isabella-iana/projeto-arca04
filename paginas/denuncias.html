@@ -1,183 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gerenciar Denúncias - ARCA</title>
-<link rel="stylesheet" href="../css/denuncias.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Denúncias - ARCA</title>
+    <link rel="stylesheet" href="../css/denuncias.css">
 </head>
 
 <body>
 
-<header>
+    <header>
 
-<div class="logo">
-<img src="img/logo-arca.png" alt="ARCA">
-</div>
+        <div class="logo-area">
+            <img src="../imagens/logo_arca.png" alt="ARCA">
+        </div>
 
-<nav>
-<a href="dashboard.html">Dashboard</a>
-<a href="cadastro-animal.html">Animais</a>
-<a href="denuncias.html">Denúncias</a>
-<a href="atendimento.html">Atendimento</a>
-</nav>
+        <nav>
 
-</header>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="gerenciar-animais.html">Animais</a>
+            <a href="denuncias.html">Denúncias</a>
+            <a href="#">Atendimento</a>
+            <a href="#">Relatórios</a>
+        </nav>
 
-<main>
+        <div class="usuario">
+            Prefeitura
+        </div>
 
-<section class="topo">
+    </header>
 
-<h1>Gerenciamento de Denúncias</h1>
+    <main>
 
-<p>
-Acompanhe e gerencie as denúncias recebidas pelo Programa ARCA.
-</p>
+        <section class="topo">
 
-</section>
+            <h1>Gerenciamento de Denúncias</h1>
 
-<section class="resumo">
+            <p>
+                Acompanhe e gerencie as denúncias recebidas pelo Programa ARCA.
+            </p>
 
-<div class="card">
-<h2>38</h2>
-<p>Denúncias Ativas</p>
-</div>
+        </section>
 
-<div class="card">
-<h2>12</h2>
-<p>Em Análise</p>
-</div>
+        <section class="resumo">
 
-<div class="card">
-<h2>95</h2>
-<p>Resolvidas</p>
-</div>
+            <div class="card">
+                <h2>38</h2>
+                <p>Denúncias Ativas</p>
+            </div>
 
-</section>
+            <div class="card">
+                <h2>12</h2>
+                <p>Em Análise</p>
+            </div>
 
-<section class="filtros">
+            <div class="card">
+                <h2>95</h2>
+                <p>Resolvidas</p>
+            </div>
 
-<input type="text" placeholder="Pesquisar protocolo">
+        </section>
 
-<select>
-<option>Todos</option>
-<option>Urgente</option>
-<option>Em Análise</option>
-<option>Resolvido</option>
-</select>
+        <section class="filtros">
 
-<button>
-Pesquisar
-</button>
+            <input type="text" placeholder="Pesquisar protocolo">
 
-</section>
+            <select>
+                <option>Todos</option>
+                <option>Urgente</option>
+                <option>Em Análise</option>
+                <option>Resolvido</option>
+            </select>
 
-<section class="tabela-area">
+            <button>
+                Pesquisar
+            </button>
 
-<table>
+        </section>
 
-<thead>
+        <section class="tabela-area">
 
-<tr>
-<th>Protocolo</th>
-<th>Bairro</th>
-<th>Data</th>
-<th>Prioridade</th>
-<th>Status</th>
-<th>Ações</th>
-</tr>
+            <table>
 
-</thead>
+                <thead>
 
-<tbody>
+                    <tr>
+                        <th>Protocolo</th>
+                        <th>Bairro</th>
+                        <th>Data</th>
+                        <th>Prioridade</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
 
-<tr>
+                </thead>
 
-<td>#AR001</td>
-<td>Nova Almeida</td>
-<td>12/05/2026</td>
-<td class="urgente">Alta</td>
-<td>Em análise</td>
+                <tbody>
 
-<td>
+                    <tr>
 
-<button class="aprovar">
-Atender
-</button>
+                        <td>#AR001</td>
+                        <td>Nova Almeida</td>
+                        <td>12/05/2026</td>
+                        <td class="urgente">Alta</td>
+                        <td>Em análise</td>
 
-<button class="detalhes">
-Detalhes
-</button>
+                        <td>
 
-</td>
+                            <button class="aprovar">
+                                Atender
+                            </button>
 
-</tr>
+                            <button class="detalhes">
+                                Detalhes
+                            </button>
 
-<tr>
+                        </td>
 
-<td>#AR002</td>
-<td>Laranjeiras</td>
-<td>15/05/2026</td>
-<td>Média</td>
-<td>Pendente</td>
+                    </tr>
 
-<td>
+                    <tr>
 
-<button class="aprovar">
-Atender
-</button>
+                        <td>#AR002</td>
+                        <td>Laranjeiras</td>
+                        <td>15/05/2026</td>
+                        <td>Média</td>
+                        <td>Pendente</td>
 
-<button class="detalhes">
-Detalhes
-</button>
+                        <td>
 
-</td>
+                            <button class="aprovar">
+                                Atender
+                            </button>
 
-</tr>
+                            <button class="detalhes">
+                                Detalhes
+                            </button>
 
-<tr>
+                        </td>
 
-<td>#AR003</td>
-<td>Feu Rosa</td>
-<td>18/05/2026</td>
-<td class="urgente">Alta</td>
-<td>Pendente</td>
+                    </tr>
 
-<td>
+                    <tr>
 
-<button class="aprovar">
-Atender
-</button>
+                        <td>#AR003</td>
+                        <td>Feu Rosa</td>
+                        <td>18/05/2026</td>
+                        <td class="urgente">Alta</td>
+                        <td>Pendente</td>
 
-<button class="detalhes">
-Detalhes
-</button>
+                        <td>
 
-</td>
+                            <button class="aprovar">
+                                Atender
+                            </button>
 
-</tr>
+                            <button class="detalhes">
+                                Detalhes
+                            </button>
 
-</tbody>
+                        </td>
 
-</table>
+                    </tr>
 
-</section>
+                </tbody>
 
-<section class="imagem">
+            </table>
 
-<img src="../imagens/fofo.jpg" alt="Denúncia">
+        </section>
 
-</section>
+        <section class="imagem">
 
-</main>
+            <img src="../imagens/fofo.jpg" alt="Denúncia">
 
-<footer>
+        </section>
 
-Programa ARCA • Prefeitura da Serra
+    </main>
 
-</footer>
+    <footer>
 
-<script src="../js/denuncias.js"></script>
+        Programa ARCA • Prefeitura da Serra
+
+    </footer>
+
+    <script src="../js/denuncias.js"></script>
 
 </body>
+
 </html>
