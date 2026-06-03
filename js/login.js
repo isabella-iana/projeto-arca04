@@ -22,19 +22,19 @@ document
             senha === "123456"
         ) {
             alert("Lgin realizado com sucesso!")
-            window.location.href = "./paginas/dashboard.html";
+            window.location.href = "./paginas/home.html";
         } else if (
             usuario === "candidato" &&
             senha === "cand!098"
         ) {
             window.location.href =
-            "./paginas/dashboard.html";
+            "./paginas/home-candidato.html";
         } else if (
             usuario === "Ong" &&
             senha === "ong$-135"
         ) {
             window.location.href =
-            "./paginas/dashboard.html";
+            "./paginas/dashboard-ong.html";
         }
         else{
             alert("Usuário ou senha inválidos");
