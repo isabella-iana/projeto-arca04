@@ -1,29 +1,42 @@
 document
-.getElementById("loginForm")
-.addEventListener("submit", function(e){
+    .getElementById("loginForm")
+    .addEventListener("submit", function(e){
 
-e.preventDefault();
+        e.preventDefault();
 
-const usuario =
-document.getElementById("usuario").value;
+        const usuario =
+        document.getElementById("usuario").value;
 
-const senha =
-document.getElementById("senha").value;
+        const senha =
+        document.getElementById("senha").value;
 
-if(
-usuario === "prefeitura" &&
-senha === "pref@456"
-){
+        if(
+            usuario === "prefeitura" &&
+            senha === "pref@456"
+        ){
+            alert("Login realizado com sucesso!");
+            window.location.href = "./paginas/dashboard.html";
 
-alert("Login realizado com sucesso!");
-
-window.location.href =
-"./paginas/dashboard.html";
-
-}else{
-
-alert("Usuário ou senha inválidos");
-
-}
-
+        } else if (
+            usuario === "tutor" &&
+            senha === "123456"
+        ) {
+            alert("Lgin realizado com sucesso!")
+            window.location.href = "./paginas/dashboard.html";
+        } else if (
+            usuario === "candidato" &&
+            senha === "cand!098"
+        ) {
+            window.location.href =
+            "./paginas/dashboard.html";
+        } else if (
+            usuario === "Ong" &&
+            senha === "ong$-135"
+        ) {
+            window.location.href =
+            "./paginas/dashboard.html";
+        }
+        else{
+            alert("Usuário ou senha inválidos");
+        }
 });
